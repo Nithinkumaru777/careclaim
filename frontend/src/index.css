@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bone: #F2EEE5;
+  --color-paper: #FAF8F2;
+  --color-ink: #121B18;
+  --color-ink-soft: #4A5651;
+  --color-rule: #D9D3C4;
+  --color-pine: #0F4C43;
+  --color-pine-deep: #0A3530;
+  --color-phosphor: #5CFF9D;
+  --color-term-bg: #0A0F0D;
+  --color-moss: #2E7D4F;
+  --color-amber: #B7791F;
+  --color-vermilion: #C0392B;
+
+  --font-sans: "Geist Sans", "Geist", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  --font-serif: "Instrument Serif", serif;
+}
+
+body {
+  @apply bg-bone text-ink font-sans antialiased;
+  /* subtle paper grain */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Tabular nums for mono */
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+@layer utilities {
+  .term-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .term-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .term-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-ink-soft/30 rounded;
+  }
+}
+
+@media print {
+  body { background: white !important; color: black !important; }
+  .grid { display: block !important; }
+  .lg\:col-span-3, .lg\:col-span-6 { width: 100% !important; margin-bottom: 2rem !important; page-break-inside: avoid; }
+  .bg-paper { border: 1px solid #ccc !important; box-shadow: none !important; margin-bottom: 20px; page-break-inside: avoid; }
+  .bg-pine-deep, .bg-pine { background: #000 !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+  .bg-term-bg { background: #fff !important; color: #000 !important; border: 1px solid #ccc !important; -webkit-print-color-adjust: exact; }
+  .text-phosphor, .text-pine-deep, .text-moss { color: #000 !important; font-weight: bold; }
+  .bg-phosphor { background: #eee !important; color: #000 !important; -webkit-print-color-adjust: exact; }
+  .text-vermilion { color: #000 !important; text-decoration: line-through; }
+  button { display: none !important; }
+  /* Override terminal text colors for print */
+  .bg-term-bg, .bg-term-bg * { color: #000 !important; }
+}

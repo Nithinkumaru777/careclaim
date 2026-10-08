@@ -1,0 +1,46 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - button "← Back to Dashboard" [ref=e6]
+        - heading "New Claim Intake" [level=1] [ref=e7]
+      - combobox [ref=e8]:
+        - option "Load Sample Scenario..." [selected]
+        - option "1. Clean Approval"
+        - option "2. Partial (Cosmetic)"
+        - option "3. Fraud/Overcharge"
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - heading "Patient Details" [level=2] [ref=e12]
+          - generic [ref=e13]:
+            - generic [ref=e14]:
+              - generic [ref=e15]: Patient ID
+              - textbox [ref=e16]: P-1001
+            - generic [ref=e17]:
+              - generic [ref=e18]: Policy Number
+              - textbox [ref=e19]: CC-402
+          - generic [ref=e20]:
+            - generic [ref=e21]: Diagnosis Code
+            - textbox [ref=e22]: K35.8 (Appendicitis)
+        - generic [ref=e23]:
+          - generic [ref=e24]:
+            - heading "Itemized Bill" [level=2] [ref=e25]
+            - generic [ref=e26]: "Total: ₹85,000"
+          - generic [ref=e27]:
+            - generic [ref=e28]:
+              - generic [ref=e29]: Scan Physical Bill (OCR)
+              - generic [ref=e30]: Upload a PDF or image to extract items via Gemini Vision.
+            - generic [ref=e31]:
+              - button "Choose File" [ref=e32] [cursor=pointer]
+              - button "Extract Line Items" [ref=e33]
+          - generic [ref=e35]:
+            - textbox "Item Name" [ref=e36]: Appendectomy — laparoscopic
+            - spinbutton "Cost" [ref=e37]: "85000"
+            - spinbutton "Qty" [ref=e38]: "1"
+            - button "×" [ref=e39]
+          - button "+ Add Line Item" [ref=e40]
+      - generic [ref=e41]:
+        - button "Submit Claim" [ref=e42]
+        - generic [ref=e43]: Enter a valid policy number to preview coverage.
+  - region "Notifications alt+T"

@@ -1,0 +1,15 @@
+[     225ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=6e8b9e02:15804
+[     826ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5000/api/policies/lookup?number=CC-402:0
+[    4502ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:5000/api/claims:0
+[   31221ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=6e8b9e02:15804
+[   33269ms] ReferenceError: navigate is not defined
+    at onClick (http://localhost:5173/src/pages/ClaimView.tsx:415:23)
+    at executeDispatch (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=6e8b9e02:9906:5)
+    at runWithFiberInDEV (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=6e8b9e02:944:66)
+    at processDispatchQueue (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=6e8b9e02:9932:27)
+    at http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=6e8b9e02:10201:5
+    at batchedUpdates$1 (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=6e8b9e02:2145:12)
+    at dispatchEventForPluginEventSystem (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=6e8b9e02:10005:4)
+    at dispatchEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=6e8b9e02:12513:29)
+    at dispatchDiscreteEvent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=6e8b9e02:12495:56)
+[   48583ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=6e8b9e02:15804
